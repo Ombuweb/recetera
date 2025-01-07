@@ -1,1 +1,1 @@
-export * from './recipe-services.contract';
+export * from './recipe-service.contract';
