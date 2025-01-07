@@ -1,6 +1,10 @@
 # recetera
 
-Recetera is a project through which I showcase my skills as a Software Developer. It is a recipe sharing platform where users can record and share their favorite recipes with their loved ones.
+::: Note
+This project is a work in progress.
+:::
+
+The purpose of the Recetera app project is to showcase my skills as a Software Developer. It is a recipe sharing platform where users can record and share their favorite recipes with loved ones.
 
 ## Technologies
 
@@ -21,24 +25,3 @@ The project has the following features:
 - Recipe Search
 - Recipe Sharing
 - Tagging
-
-## Try it out
-
-You can try the project out via the following 2 ways:
-
-### 1. Docker
-
-- Clone the repository
-- Run `docker-compose up` in the root directory
-- Visit `localhost:3000` in your browser
-
-### 2. Manual
-
-- Clone the repository
-- Run `npm install` in the root directory
-- Run `npm run dev` in the root directory
-- Visit `localhost:3000` in your browser
-
-### 3. StackBlitz
-
-- Visit the project on StackBlitz [here](https://stackblitz.com/github/oluwakeye-john/recetera)

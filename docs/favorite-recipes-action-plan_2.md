@@ -12,7 +12,7 @@ title: Favorite Recipes App Plan
 ### 2. Choose the Technology Stack
 
 - **Frontend and Backend**: Nuxt.js
-- **Database**: Firestore (GCP)
+- **Database**: Start with MySQL (will be designed to be database-agnostic)
 - **Storage**: Cloud Storage (GCP) or Cloudflare R2
 - **OCR**: TensorFlow.js
 - **Mobile**: NativeScript-Vue
