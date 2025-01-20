@@ -4,10 +4,10 @@ title: Favorite Recipes App Plan
 
 ### 1. Define the Core Features
 
-- [Add a new recipe](./favorite-recipes-srs.md#add-a-new-recipe)
-- [View all recipes](./favorite-recipes-srs.md#view-all-recipes)
-- [Search for a recipe](./favorite-recipes-srs.md#search-for-a-recipe)
-- [Share a recipe](./favorite-recipes-srs.md#share-a-recipe)
+- [Add a new recipe](./favorite-recipes-srs_1.md#add-a-new-recipe)
+- [View all recipes](./favorite-recipes-srs_1.md#view-all-recipes)
+- [Search for a recipe](./favorite-recipes-srs_1.md#search-for-a-recipe)
+- [Share a recipe](./favorite-recipes-srs_1.md#share-a-recipe)
 
 ### 2. Choose the Technology Stack
 
