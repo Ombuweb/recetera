@@ -10,6 +10,7 @@ let recipeCloudflareR2Repository: IRecipeDatabaseRepository;
 
 const getRecipeSQLDatabaseRepository = (): IRecipeDatabaseRepository => {
   if (!recipeDatabaseRepository) {
+    console.log('DB_OPTIONS', process.env.DATABASE_URL);
     // read mysql connection details from .env file
     if (!process.env.DATABASE_URL)
       throw new Error('DB_OPTIONS not found in .env file');

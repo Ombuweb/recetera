@@ -1,2 +1,14 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
+
+body {
+  background-color: black;
+  color: white;
+}
+/* light */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fee2e2;
+    color: #333;
+  }
+}

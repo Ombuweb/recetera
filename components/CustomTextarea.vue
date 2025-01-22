@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <label :for="props.label">
-      {{ props.label }}
+  <div class="flex flex-col">
+    <label :for="fieldName">
+      {{ fieldName }}
     </label>
     <textarea
+      :id="fieldName"
       v-model="model"
-      id="recipe"
       rows="10"
       cols="30"
       placeholder="Enter your recipe here"
@@ -15,5 +15,5 @@
 
 <script setup lang="ts">
 const model = defineModel<string>();
-const props: { label: string } = defineProps();
+defineProps(['fieldName']);
 </script>

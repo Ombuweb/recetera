@@ -1,8 +1,10 @@
 export interface RecipeModel {
   id: string;
   name: string;
-  description: string;
-  ingredients: string[];
-  steps: string[];
-  imageUrl: string;
+  ingredients: string;
+  steps: string;
+  image: string;
+  notes: string;
+  tags: string[];
+  user: string;
 }
