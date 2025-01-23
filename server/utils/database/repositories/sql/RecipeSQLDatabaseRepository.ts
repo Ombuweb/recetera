@@ -4,6 +4,7 @@ import { createDatabase, Database, ExecResult, Primitive } from 'db0';
 import mysql from 'db0/connectors/mysql2';
 import { ConnectionOptions } from 'mysql2';
 import { drizzle, DrizzleDatabase } from 'db0/integrations/drizzle';
+import { tables, useDrizzle } from './dizzle';
 
 export class RecipeSQLDatabaseRepository implements IRecipeDatabaseRepository {
   private mysqlDB: Database;
@@ -68,14 +69,18 @@ export class RecipeSQLDatabaseRepository implements IRecipeDatabaseRepository {
   async createRecipe(recipe: RecipeModel) {
     // Create a recipe in the SQL database.
     try {
-      const result: ExecResult = await this.mysqlDB.sql`
-        INSERT INTO recipes (id, name, ingredients, steps, image, notes, tags, user)
-        VALUES (${recipe.id}, ${recipe.name}, ${recipe.ingredients}, ${
-        recipe.steps
-      }, ${recipe.image}, ${recipe.notes}, ${recipe.tags.join(',')}, ${
-        recipe.user
-      });
-      `;
+      const result = useDrizzle()
+        .insert(tables.recipes)
+        .values({
+          // id: recipe.id,
+          name: recipe.name,
+          ingredients: recipe.ingredients,
+          steps: recipe.steps,
+          image: recipe.image,
+          notes: recipe.notes,
+          tags: JSON.stringify(recipe.tags),
+          user: recipe.user,
+        });
       console.log('Result', result);
     } catch (error) {
       console.error('Error creating recipe', error);

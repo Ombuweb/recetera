@@ -1,8 +1,13 @@
 <template>
-  <form @submit.prevent="submit" class="">
-    <label for="name">
+  <form @submit.prevent="submit" class="flex flex-col gap-5">
+    <label for="name" class="flex flex-col gap-2 uppercase text-sm">
       <span>Name</span>
-      <input type="text" id="name" v-model="form.name" />
+      <input
+        type="text"
+        id="name"
+        v-model="form.name"
+        class="border border-gray-700 border-opacity-50 rounded-lg p-2 self-start focus:outline-0 focus:border-red-700"
+      />
     </label>
     <CustomTextarea field-name="Ingredients" v-model="form.ingredients" />
     <CustomTextarea field-name="Instructions" v-model="form.steps" />
@@ -12,7 +17,12 @@
     </label>
     <RecipeTags />
     <CustomTextarea label="Notes" />
-    <button type="submit">Add Recipe</button>
+    <button
+      type="submit"
+      class="bg-gradient-to-tl from-red-500 to-red-700 hover:from-red-600 hover:to-red-700 self-center px-4 py-2 rounded-lg shadow-lg text-sm uppercase font-bold transition-transform transform hover:-translate-y-1"
+    >
+      Add Recipe
+    </button>
   </form>
 </template>
 

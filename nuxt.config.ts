@@ -4,17 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/test-utils/module', '@nuxt/ui', '@nuxthub/core'],
   css: ['~/assets/css/main.css'],
-  nitro: {
-    database: {
-      recetera: {
-        connector: 'postgresql',
-        options: {
-          database: 'recetera',
-          host: 'localhost',
-          password: 'password',
-          port: 543,
-        },
-      },
-    },
+  hub: {
+    database: true,
   },
 });

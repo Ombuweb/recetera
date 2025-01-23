@@ -2,13 +2,13 @@
 @import '@nuxt/ui';
 
 body {
-  background-color: black;
+  background-color: #121212;
   color: white;
 }
 /* light */
 @media (prefers-color-scheme: light) {
   body {
     background-color: #fee2e2;
-    color: #333;
+    color: #121212;
   }
 }

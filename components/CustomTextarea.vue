@@ -1,9 +1,10 @@
 <template>
-  <div class="flex flex-col">
-    <label :for="fieldName">
+  <div class="flex flex-col gap-2">
+    <label :for="fieldName" class="uppercase text-sm">
       {{ fieldName }}
     </label>
     <textarea
+      class="focus:outline-0 focus:border-red-700 border border-gray-700 border-opacity-50 rounded-lg p-5"
       :id="fieldName"
       v-model="model"
       rows="10"
