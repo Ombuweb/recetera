@@ -5,6 +5,10 @@ import { RecipeModel } from '~/core/models/domain';
 export class RecipeDatabaseService implements IRecipeDatabaseService {
   constructor(private recipeRepository: IRecipeDatabaseRepository) {}
 
+  async createTable() {
+    return await this.recipeRepository.createTable();
+  }
+
   async getRecipes() {
     return this.recipeRepository.getRecipes();
   }
