@@ -29,7 +29,6 @@
 <script setup lang="ts">
 import type { RecipeModel } from '~/core/models/domain';
 const form = ref<RecipeModel>({
-  id: '1',
   name: 'Spaghetti Carbonara',
   ingredients: 'Spaghetti, Eggs, Parmesan Cheese, Pancetta, Black Pepper, Salt',
   steps:

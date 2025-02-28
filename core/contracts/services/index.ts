@@ -1,2 +1,2 @@
-export * from './recipe-service.contract';
-export * from '../../../server/utils/database/contracts/services/recipe-database-service.contract';
+export * from './recipe-DB-service.contract';
+export * from './recipe-database-service.contract';
