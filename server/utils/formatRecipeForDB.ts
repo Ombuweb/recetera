@@ -1,7 +1,7 @@
 import { RecipeModel } from '~/core/models/domain';
 import type { MultiPartData } from 'h3';
 
-export default function formatRecipeFormDataForDB(
+export default function formatRecipeForDB(
   recipeFormData: MultiPartData[] | undefined
 ) {
   return recipeFormData?.reduce((acc, value) => {
