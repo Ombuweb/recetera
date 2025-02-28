@@ -1,5 +1,4 @@
 export interface RecipeModel {
-  id: string;
   name: string;
   ingredients: string;
   steps: string;
