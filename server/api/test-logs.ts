@@ -1,8 +1,8 @@
-import { logger } from '../utils/telemetry/logs';
+// import { getReceteraLoggingService } from '../utils/database/locator';
 
 export default defineEventHandler(async (event) => {
-  logger.info('Hello from Grafana, recetera here');
-  return {
-    body: 'Hello from Grafana',
-  };
+  // getReceteraLoggingService().logInfo('Hello from Grafana, recetera here');
+  // return {
+  //   body: 'Hello from Grafana',
+  // };
 });
