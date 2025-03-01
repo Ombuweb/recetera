@@ -30,13 +30,13 @@ The project has the following features:
 
 ### server
 
+![Recetera Server Architecture](/assets/images/recetera-server-architecture.webp)
+
 Below is a high-level overview of the Recetera app server side architecture.
 
 The request handler (`defineEventHandler()`) communicates with the recipe service locator, which is responsible for instantiating the appropriate recipe database service.
 
 The recipe database service interacts with the target database, which can be SQL, Firestore, MongoDB, etc.
-
-![Recetera Server Architecture](/assets/images/recetera-server-architecture.webp)
 
 Currently, I’ve implemented two SQL database services:
 • Cloudflare D1 via NuxtHub
