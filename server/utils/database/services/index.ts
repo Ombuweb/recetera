@@ -1,2 +1,2 @@
 export * from './RecipeLocalSQLDatabaseService';
-export * from './NuxtHubDBService';
+export * from './NuxtHubSQLDatabaseService';

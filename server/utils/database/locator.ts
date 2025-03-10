@@ -1,26 +1,38 @@
-import { IRecipeDatabaseService } from '~/core/contracts/services';
+import {
+  IRecipeDatabaseService,
+  IUserDatabaseService,
+} from '~/core/contracts/services';
 import { NuxtHubDBService, RecipeLocalSQLDatabaseService } from './services';
 import { IReceteraLoggingService } from '../telemetry/logs/recetera-logging-service.contract';
 // import { logger } from '@/server/utils/telemetry/logs/winston-logger';
 import { ReceteraLoggingService } from '../telemetry/logs/ReceteraLoggingService';
-import { useDrizzle } from './sql/drizzle';
-import { J } from 'vitest/dist/chunks/reporters.D7Jzd9GS.js';
+import { UserLocalSQLDatabaseService } from './services/UserLocalSQLDBService';
+import { localMySQLDatabase } from './sql/local-mysql-database';
 
 let recipeDatabaseService: IRecipeDatabaseService;
+let userDatabaseService: IUserDatabaseService;
 let receteraLoggingService: IReceteraLoggingService;
 
 /**
  * Get the Recipe Database Service instance
  * @returns {IRecipeDatabaseService} The Recipe Database Service instance
  */
-export const getRecipeDatabaseService = (): IRecipeDatabaseService => {
-  if (!recipeDatabaseService) {
-    const dbOptions = JSON.parse(process.env.DATABASE_URL as string);
-    recipeDatabaseService = new RecipeLocalSQLDatabaseService(dbOptions);
-  }
-  return recipeDatabaseService;
-};
+export const useRecipeDatabaseService =
+  async (): Promise<IRecipeDatabaseService> => {
+    if (!recipeDatabaseService) {
+      recipeDatabaseService =
+        await RecipeLocalSQLDatabaseService.createInstance();
+    }
+    return recipeDatabaseService;
+  };
 
+export const useUserDatabaseService =
+  async (): Promise<IUserDatabaseService> => {
+    if (!userDatabaseService) {
+      userDatabaseService = await UserLocalSQLDatabaseService.createInstance();
+    }
+    return userDatabaseService;
+  };
 /**
  * Get the Logger instance based on the `LOGGER_TYPE` environment variable. Default is `winston`
  * @returns {IReceteraLoggerModel} The Logger instance
