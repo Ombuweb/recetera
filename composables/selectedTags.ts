@@ -1,3 +1,5 @@
+import type { TAGS } from '~/core/models/domain';
+
 export function useSelectedTags() {
-  return useState<string[]>('selectedTags', () => []);
+  return useState<TAGS[]>('selectedTags', () => []);
 }

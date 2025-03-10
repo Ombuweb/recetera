@@ -35,13 +35,13 @@ const form = ref<RecipeModel>({
     '1. Boil spaghetti. 2. Cook pancetta. 3. Mix eggs and cheese. 4. Combine all with spaghetti. 5. Season with salt and pepper.',
   image: 'https://example.com/spaghetti-carbonara.jpg',
   notes: 'Use fresh eggs for better taste.',
-  tags: ['Italian', 'Pasta', 'Main Course'],
-  user: 'chef123',
+  tags: ['Vegan', 'Keto', 'Low-Carb'],
+  user_id: Math.floor(Math.random() * 200),
 });
 const submit = async (e: Event) => {
   const formData = prepareData();
   try {
-    await fetch('/api/recipe/create', {
+    await fetch('/api/recipes', {
       method: 'POST',
       body: formData,
     });
