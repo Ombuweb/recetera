@@ -1,0 +1,27 @@
+config:
+  target: http://localhost:3000
+  phases:
+    - duration: 20
+      arrivalRate: 5
+      rampTo: 10
+      name: Warm up phase
+  processor: ./processor.mjs
+scenarios:
+  - flow:
+      - post:
+          # url: '/api/user/create'
+          # beforeRequest: getRandomCredentials
+          # json:
+          #   username: '{{ username }}'
+          #   email: '{{ email }}'
+          #   password: '{{ password }}'
+          url: '/api/recipes'
+          beforeRequest: createRecipe
+          json:
+            name: '{{ name }}'
+            ingredients: '{{ ingredients }}'
+            steps: '{{ steps }}'
+            notes: '{{ notes }}'
+            image: '{{ image }}'
+            tags: '{{ tags }}'
+            user_id: '{{ user_id }}'
