@@ -7,7 +7,7 @@
         <h1 class="text-5xl font-bold">My Recipes</h1>
         <h2 class="">What's that recipe you want to share today?</h2>
       </header>
-      <AddRecipe />
+      <RecipesAddRecipe />
     </div>
   </main>
 </template>
