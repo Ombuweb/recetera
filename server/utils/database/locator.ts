@@ -7,7 +7,6 @@ import { IReceteraLoggingService } from '../telemetry/logs/recetera-logging-serv
 // import { logger } from '@/server/utils/telemetry/logs/winston-logger';
 import { ReceteraLoggingService } from '../telemetry/logs/ReceteraLoggingService';
 import { UserLocalSQLDatabaseService } from './services/UserLocalSQLDBService';
-import { localMySQLDatabase } from './sql/local-mysql-database';
 
 let recipeDatabaseService: IRecipeDatabaseService;
 let userDatabaseService: IUserDatabaseService;
